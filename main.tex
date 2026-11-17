@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}  % prints < > correctly
 
 \usepackage{fancyhdr}
 \usepackage{graphicx}
@@ -68,6 +69,25 @@
 \setcounter{page}{1}
 
 
-\section{Introduction}
+% ===============================================================
+% Report body -- each section lives in its own file in sections/
+% Note: the project summary should be at most 4 pages (excluding
+% references). There is no limit on the number of references.
+% Any main text beyond the 4-page limit will be ignored by assessor(s).
+% ===============================================================
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/methods}
+\input{sections/experiments}
+\input{sections/results}
+\input{sections/conclusion}
+
+% ---------------------------------------------------------------
+% References (edit references.bib)
+% ---------------------------------------------------------------
+\nocite{*} % lists every entry in references.bib -- delete once you cite with \cite{}
+\bibliographystyle{ieeetr}
+\bibliography{references}
 
 \end{document}
